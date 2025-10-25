@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Health Report for {{ name }}</h1>
+    <p><b>Age:</b> {{ age }}</p>
+    <p><b>Heart Rate:</b> {{ heart_rate }} bpm</p>
+    <p><b>Temperature:</b> {{ temperature }} °C</p>
+    <p><b>SpO₂:</b> {{ spo2 }} %</p>
+    <h2>Status: <span class="{{ status|lower }}">{{ status }}</span></h2>
+    <a href="/">Go Back</a>
+</body>
+</html>
