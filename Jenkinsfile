@@ -1,10 +1,13 @@
 pipeline {
     agent any
-
     stages {
-        stage('Clone Repository') {
+        stage('Checkout') {
             steps {
-                git 'https://github.com/JIBINJOBY/smart-health-monitor.git'
+                git(
+                    url: 'https://github.com/JIBINJOBY/smart-health-monitor.git',
+                    credentialsId: 'github-pat',
+                    branch: 'main'
+                )
             }
         }
         stage('Build Docker Image') {
@@ -19,4 +22,3 @@ pipeline {
         }
     }
 }
-
