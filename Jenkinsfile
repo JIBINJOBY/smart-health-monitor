@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/yourusername/smart-health-monitoring.git'
+                git 'https://github.com/JIBINJOBY/smart-health-monitor.git'
             }
         }
         stage('Build Docker Image') {
@@ -19,3 +19,4 @@ pipeline {
         }
     }
 }
+
